@@ -1,7 +1,16 @@
 import { Router } from "express"
 
+//controllers
+import {
+    CitiesController
+} from "../controllers"
+
 const router = Router()
 
-router.get('/', (req,res) => res.status(500).send('rotuer /'))
+
+//Routes
+router.post('/api/cities', CitiesController.create)
+
+
 
 export { router }
